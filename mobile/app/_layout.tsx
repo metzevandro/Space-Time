@@ -19,9 +19,9 @@ import * as SecureStore from 'expo-secure-store'
 const StyledStripes = styled(Stripes)
 
 export default function Layout() {
-  const [isUserAuthenticated, setIsUserAuthenticate] = useState<null | boolean>(
-    null,
-  )
+  const [isUserAuthenticated, setIsUserAuthenticated] = useState<
+    null | boolean
+  >(null)
 
   const [hasLoadedFonts] = useFonts({
     Roboto_400Regular,
@@ -31,7 +31,7 @@ export default function Layout() {
 
   useEffect(() => {
     SecureStore.getItemAsync('token').then((token) => {
-      setIsUserAuthenticate(!!token)
+      setIsUserAuthenticated(!!token)
     })
   })
 
@@ -45,13 +45,14 @@ export default function Layout() {
       className="relative flex-1 bg-gray-900"
       imageStyle={{ position: 'absolute', left: '-100%' }}
     >
-      <StyledStripes className="absolute left-1" />
+      <StyledStripes className="absolute left-2" />
       <StatusBar style="light" translucent />
 
       <Stack
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: 'transparent' },
+          animation: 'fade',
         }}
       >
         <Stack.Screen name="index" redirect={isUserAuthenticated} />
