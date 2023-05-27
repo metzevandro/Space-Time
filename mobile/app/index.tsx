@@ -5,7 +5,7 @@ import { useRouter } from 'expo-router'
 
 import NLWLogo from '../src/assets/nlw-spacetime-logo.svg'
 import { useEffect } from 'react'
-import { api } from '../src/assets/lib/api'
+import { api } from '../src/lib/api'
 
 const discovery = {
   authorizationEndpoint: 'https://github.com/login/oauth/authorize',
