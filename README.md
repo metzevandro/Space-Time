@@ -33,5 +33,5 @@ Aplicação de recordação de memórias, onde o usuário poderá adicionar à u
 
 ## Mobile
 <p align="center">
-  <img src=".github/Mobile.jpg" alt="Project Preview" width="100%">
+  <img src=".github/Mobile.jpg" alt="Project Preview" align="left" width="20%">
 </p>
